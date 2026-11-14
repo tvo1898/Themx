@@ -1,0 +1,70 @@
+import type { makeColors } from './make-colors.js'
+
+// The look's seed colors: makeColors expands them into the design system's
+// ~100 tokens. Dark only, high contrast: phosphor-green text in bright, normal
+// and dim steps on green-black, with the city's neon in the role colors.
+export const PALETTE: Parameters<typeof makeColors>[0] = {
+  "label": "Neon Noir Terminal",
+  "only": "dark",
+  "contrast": "more",
+  "roles": {
+    "accent": {
+      "seed": "#a8ff2a",
+      "stops": {
+        "300": "#d4ff3a",
+        "400": "#2a8a12",
+        "450": "#2f9a16",
+        "600": "#7dff3a",
+        "700": "#1d6b22",
+        "800": "#0f3315"
+      }
+    },
+    "danger": {
+      "seed": "#ff2a3d",
+      "stops": {
+        "300": "#ff9080"
+      }
+    },
+    "success": {
+      "seed": "#00f0ff",
+      "stops": {
+        "400": "#3ff0ff"
+      }
+    },
+    "warning": {
+      "seed": "#ffb000",
+      "stops": {
+        "200": "#eb9c00",
+        "300": "#ffc040"
+      }
+    },
+    "pro": {
+      "seed": "#ff2bd6",
+      "stops": {
+        "300": "#ff80ec"
+      }
+    }
+  },
+  "dark": {
+    "gray": {
+      "anchors": {
+        "surface-0": "#061008",
+        "surface-1": "#101f14",
+        "surface-2": "#122216",
+        "surface-3": "#16281a",
+        "text-primary": "#80ff98",
+        "text-secondary": "#2ee862",
+        "text-muted": "#58bd75"
+      }
+    },
+    "git": {
+      "added": "#4dff70",
+      "removed": "#ff8a78",
+      "modified": "#ffcc4d",
+      "merged": "#ef8bff",
+      "closed": "#ff8a78",
+      "conflicting": "#ffa04d",
+      "draft": "#8fc4a0"
+    }
+  }
+}

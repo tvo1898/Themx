@@ -1,0 +1,11 @@
+{
+  "name": "themx",
+  "owner": { "name": "tvo1898" },
+  "plugins": [
+    {
+      "name": "neon-noir-terminal",
+      "source": "./mods/neon-noir-terminal",
+      "description": "A dark, high-contrast green-phosphor terminal look with an animated pixel-art noir city behind the chat and a pixel prompt band"
+    }
+  ]
+}

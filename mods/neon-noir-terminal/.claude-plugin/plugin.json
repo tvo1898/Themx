@@ -1,0 +1,9 @@
+{
+  "name": "neon-noir-terminal",
+  "version": "0.1.0",
+  "description": "Neon Noir Terminal: a dark, high-contrast green-phosphor terminal look with an animated pixel-art noir city behind the chat and a pixel prompt band",
+  "author": {
+    "name": "tvo1898"
+  },
+  "types": "./types/index.d.ts"
+}

@@ -1,0 +1,8 @@
+node_modules/
+# Engine-written type files for a loaded mod
+.claude-plugin/types/
+# Review renders the design scripts write
+design/**/render*/
+design/**/shots*/
+design/**/frames/
+design/**/out/

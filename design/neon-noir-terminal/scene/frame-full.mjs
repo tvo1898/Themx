@@ -1,0 +1,12 @@
+import { createRequire } from 'node:module'
+const require = createRequire(import.meta.url)
+const pw = require('playwright')
+const dir = new URL('.', import.meta.url).pathname.replace(/\/$/, '')
+const b = await pw.chromium.launch()
+const p = await (await b.newContext({ viewport: { width: 1440, height: 900 } })).newPage()
+await p.goto(`file://${dir}/scene.svg`)
+const t = Number(process.argv[2] ?? 5.5)
+await p.evaluate(t => { for (const a of document.getAnimations()) { a.pause(); a.currentTime = t * 1000 } }, t)
+await p.waitForTimeout(150)
+await p.screenshot({ path: `${dir}/frames/full-${t}.png` })
+await b.close()
