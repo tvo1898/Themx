@@ -6,3 +6,5 @@ design/**/render*/
 design/**/shots*/
 design/**/frames/
 design/**/out/
+# Python bytecode the skill scripts write when run
+__pycache__/
